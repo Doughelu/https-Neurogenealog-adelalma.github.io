@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Urbina - Neurogeneaología del Alma</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e67e22;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --light-text: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: var(--dark-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section:nth-child(even) {
+            background-color: white;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .card {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .featured {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .featured h3 {
+            color: var(--accent-color);
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 150px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Douglas Urbina</h1>
+        <p>Investigador y Especialista en Neurogeneaología del Alma y Neurogeneaología de las Emociones</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#neurogenealogia">Neurogeneaología</a></li>
+            <li><a href="#publicaciones">Publicaciones</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <section id="inicio">
+        <h2>Bienvenidos</h2>
+        <p>Te doy la bienvenida a mi sitio web oficial, donde podrás conocer más sobre mi trabajo en el campo de la Neurogeneaología del Alma y la Neurogeneaología de las Emociones, disciplinas que he desarrollado para fusionar el estudio de la herencia familiar con disciplinas como neurociencia, psicología y espiritualidad.</p>
+        <p>A través de una investigación preliminar, he establecido conexiones importantes entre conceptos neuropsicológicos, genealógicos y espirituales, proponiendo un puente entre el estudio del dato genealógico y sus implicaciones biológicas en el funcionamiento del sistema nervioso y cerebro.</p>
+        <div class="container">
+            <div class="card">
+                <h3>Neurogeneaología del Alma</h3>
+                <p>Un enfoque innovador que conecta los patrones familiares con los procesos neuropsicológicos, creando un puente entre tradición, biología y espiritualidad.</p>
+            </div>
+            <div class="card">
+                <h3>Neurogeneaología de las Emociones</h3>
+                <p>Estudio de cómo los patrones emocionales, conductuales y experienciales se transmiten de generación en generación, influyendo en las decisiones y bienestar actual.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Douglas Urbina Duque, originario de El Cobre, me he dedicado a la investigación en el campo central dentro de la teoría denominada "Neurogeneaología del Alma (NGA)". Soy investigador, consultor familiar y genealogista según mi formación académica y profesional.</p>
+        <p>Mi trabajo se centra en la conexión entre la genealogía, la neurociencia y la psicología, buscando comprender cómo los patrones familiares pueden influenciar no solo nuestras decisiones sino también nuestros procesos neurológicos y espirituales.</p>
+        <p>Como investigador, he desarrollado metodologías terapéuticas para ayudar a las personas a identificar, comprender y transformar patrones heredados que pueden estar limitando su bienestar actual.</p>
+    </section>
+    
+    <section id="neurogenealogia">
+        <h2>Neurogeneaología: Un Enfoque Integral</h2>
+        <div class="container">
+            <div>
+                <h3>¿Qué es la Neurogeneaología del Alma?</h3>
+                <p>La Neurogeneaología del Alma (NGA) es un concepto que establece conexiones entre los datos genealógicos y su influencia en el funcionamiento del sistema nervioso y cerebro (neurobiología), incorporando aspectos que denomino "intangibles" o "del alma", refiriéndose a aquellos elementos que, más allá de la herencia genética y transmisión biológica, existen como patrones emocionales, conductuales y experienciales que se transmiten de generación en generación.</p>
+            </div>
+            <div>
+                <h3>Neurogeneaología de las Emociones</h3>
+                <p>Esta rama se enfoca específicamente en cómo los patrones emocionales se transmiten a través de las generaciones, pudiendo influir directamente en la vida cotidiana de las personas. Se asocia especialmente con la gestión de las emociones difíciles y el concepto de "memorias transgeneracionales" o "neuroimprontas de las emociones", explorando una nueva significación de los arquetipos familiares.</p>
+            </div>
+        </div>
+        <div class="featured">
+            <h3>Metodología Terapéutica</h3>
+            <p>Mi trabajo incluye el desarrollo de metodologías terapéuticas basadas en la Neurogeneaología, orientadas a revisar y resolver dinámicas familiares transmitidas que pueden estar afectando negativamente el bienestar actual. Estas metodologías incorporan elementos de neurociencia, psicología transgeneracional, genealogía y espiritualidad para ofrecer un enfoque integral de sanación.</p>
+        </div>
+    </section>
+    
+    <section id="publicaciones">
+        <h2>Publicaciones</h2>
+        <div class="featured">
+            <h3>Herencias Intangibles: El Lado Oscuro</h3>
+            <p>Mi primer libro, publicado por la revista Saber ULA, explora en profundidad los aspectos menos visibles de la herencia familiar y cómo estos afectan nuestra vida diaria. En esta obra, analizo cómo ciertos patrones familiares que se transmiten de manera "intangible" pueden tener un impacto significativo en nuestro desarrollo emocional y psicológico.</p>
+            <p>A través de casos de estudio y análisis teórico, el libro ofrece una visión innovadora sobre cómo identificar y transformar estos patrones para lograr un mayor bienestar personal.</p>
+            <a href="#" class="btn">Más información sobre el libro</a>
+        </div>
+        <h3>Otras Publicaciones</h3>
+        <p>Mi investigación también ha sido presentada en diversos artículos académicos y foros especializados, contribuyendo al desarrollo de este campo emergente que une genealogía, neurociencia y psicología.</p>
+    </section>
+    
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Consultas Personalizadas</h3>
+                <p>Ofrezco sesiones individuales donde analizamos tu historia familiar para identificar patrones transgeneracionales que pueden estar influyendo en tu vida actual.</p>
+            </div>
+            <div class="card">
+                <h3>Talleres y Seminarios</h3>
+                <p>Imparto talleres formativos sobre Neurogeneaología del Alma para profesionales y personas interesadas en comprender esta disciplina emergente.</p>
+            </div>
+            <div class="card">
+                <h3>Investigación Genealógica</h3>
+                <p>Realizo estudios genealógicos especializados enfocados en descubrir las conexiones entre patrones familiares y sus manifestaciones neuropsicológicas.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si estás interesado en mis servicios, deseas más información sobre la Neurogeneaología del Alma, o quieres programar una consulta, no dudes en contactarme.</p>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Douglas Urbina - Neurogeneaología del Alma</p>
+        <p>Todos los derechos reservados.</p>
+        <div class="social-links">
+            <!-- Aquí podrías añadir enlaces a redes sociales con iconos -->
+        </div>
+    </footer>
+</body>
+</html> 
